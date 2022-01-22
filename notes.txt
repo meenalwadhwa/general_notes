@@ -1,0 +1,55 @@
+
+APIs
+	1. Internal
+	2. External
+	3. Composite - combines all results and then gives a aggregate data
+	4. Partner - combination of 1 and 2
+
+API ARCHITECTURE
+	1. REST (Respresentation State Transfer)
+		Also called RESTful APIs
+		
+		-> JSON in response
+			json example :
+				https://www.w3schools.com/js/js_json_intro.asp
+				https://www.javatpoint.com/json-example
+		-> Server Client Arhchitecture
+			Server - responds to the request made by the client 
+			Client - sends request to the server in order to get data/service
+	
+	2. SOAP
+		Uses XML
+
+PATH vs QUERY vs BODY
+
+
+
+GITHUB FROM REST APIS
+	1. Create a repo
+		POST https://dev.azure.com/{organization}/{project}/_apis/git/repositories?api-version=6.0
+		POST https://dev.azure.com/{organization}/{project}/_apis/git/repositories?sourceRef={sourceRef}&api-version=6.0
+
+	2.	Pull in git
+			Fetch vs Pull: https://www.git-tower.com/learn/git/faq/difference-between-git-fetch-git-pull
+			 
+		
+
+
+
+GENERAL THINGS
+	-> Cache
+		Request to access data	------> 	Memory
+					Memory		------>		returns data
+		Very expensive (takes a lot of time to get data from the entire memory)
+
+		Solution is to have a smaller memory that holds data/opertations
+			that happen very oftem, so that they are not retrieved from 
+			the main memory every time.
+
+		Request		---->		Cache
+			If Hit
+				Cache	----> Response
+			If Miss
+				Main 	----> Response
+
+	-> Fork repo meaning ?
